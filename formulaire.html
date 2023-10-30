@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formulaire</title>
+    <link rel="stylesheet" href="formulaire.css" />
+  </head>
+  <body>
+    <header><h1>Formulaire d'inscription</h1></header>
+    <form method="post" action="form.php">
+      <fieldset>
+        <legend>Informations personnelles</legend>
+        <br />
+        <div class="champ">
+          <input type="radio" id="h" name="sexe" value="homme" />
+          <label for="h">Mr</label>
+          <input type="radio" id="f" name="sexe" value="femme" />
+          <label for="f">Mme</label>
+        </div>
+        <br />
+        <div class="champ">
+          <label for="mail">Email</label>
+          <input type="email" id="mail" name="mail" required />
+        </div>
+        <br />
+        <div class="champ">
+          <label for="userPassword">Mot de passe</label>
+          <input type="password" required />
+        </div>
+        <br />
+        <div>
+          <label for="userPassword">Répétez mot de passe</label>
+          <input id="userPassword" type="password" required />
+        </div>
+        <br />
+        <div class="champ">
+          <label for="nom">Nom</label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            minlength="2"
+            maxlength="25"
+            required
+          />
+        </div>
+        <br />
+        <div class="champ">
+          <label for="prenom">Prénom</label>
+          <input
+            type="text"
+            id="prenom"
+            name="prenom"
+            minlength="2"
+            maxlength="25"
+            required
+          />
+        </div>
+        <br />
+        <div class="champ">
+          <label for="bday">Date de naissance</label>
+          <input type="date" id="bday" name="bday" required />
+          <span class="validity"></span>
+        </div>
+        <br />
+        <div class="champ">
+          <label for="telNo">Téléphone</label>
+          <input id="telNo" name="telNo" type="tel" required />
+          <span class="validity"></span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Autre information</legend>
+        <div class="champ">
+          <label for="avatar">Photo</label>
+          <input
+            type="file"
+            id="avatar"
+            name="avatar"
+            accept="image/png, image/jpeg"
+          />
+        </div>
+        <br />
+        <div class="champ"></div>
+        <label
+          >Sport
+          <select name="sport">
+            <option value="Choisir votre sport">
+              ---Choisir votre sport---
+            </option>
+            <optgroup label="Sport collectif">
+              <option value="Football">Football</option>
+              <option value="Basket">Basket</option>
+              <option value="Handball">Handball</option>
+              <option value="Rugby">Rugby</option>
+            </optgroup>
+            <optgroup label="Sport individuel">
+              <option value="Badminton">Badminton</option>
+              <option value="Judo">Judo</option>
+              <option value="Tennis">Tennis</option>
+              <option value="Karaté">Karaté</option>
+              <option value="Ping Pong">Ping Pong</option>
+              <option value="Athlétisme">Athlétisme</option>
+            </optgroup>
+          </select>
+        </label>
+      </fieldset>
+      <br />
+      <footer>
+        <div class="champ">
+          <input type="submit" value="Envoyer" />
+          <input type="reset" />
+        </div>
+      </footer>
+    </form>
+  </body>
+</html>
